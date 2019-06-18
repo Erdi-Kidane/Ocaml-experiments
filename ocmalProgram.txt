@@ -1,0 +1,29 @@
+1) Subset:
+
+I had difficulty starting mainly because I'm not fimilar with OCaml syntax and this is my first functional programming language.  Beyond syntax, I had trouble because I was thinking of these problems iteratively rather than recursively.  Once I understood that recursion is a more natural solution in ocaml I approached each problem after subset with recurssion in mind.  I would ask myself "whats the base case here?  How can i solve this in terms of itself?" 
+
+2) equal_sets
+This was a trival function once subset was solved.  I simply solved this by checking to see if set A was a subset of set B and if set B was a subset of set A.  If both are true than these two sets would be equal.  I initially thought of a checking for each value in one set in the other but then I had a flash of insight and decided to use subset for the reasons explained above.
+
+3)set_union
+Used "@"
+
+4) set_intersection
+Required some research and examples of how to build lists.  I used builtin List functions to check if element existed if found recursively add it to my list.  Used List.sort_uniq to remove duplicates.
+
+5) set_diff
+This function was trival since set_intersection was solved I simply reversed the above solution and got the opposite.
+
+6)completed_fixed_point
+Most of the trouble for this function came in the form of syntax issues.  Otherwise trival function once one realizes functions are left assocative.
+
+7)
+filter_reachable
+
+Most of this code is based around parsing through given inputs and getting them in a format that will allow me to use compute fixed point.  I have several helper functions that will parse through inputs and filter based on the starting symbol then use the computed fixed point function to add new rules that will be checked later.  I worked backwards with this one looking at testcases first to understand that they were tuples.
+
+resources:
+https://caml.inria.fr/pub/docs/oreilly-book/html/book-ora016.html
+stackoverflow
+
+
